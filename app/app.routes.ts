@@ -5,7 +5,7 @@ import { LoginComponent } from './common/components/login/login.component';
 
 export const routes: RouterConfig = [
     {
-        path: '',
+        path: '',   //domain, subdomain, session bilgilerinin kontrol edildiği ilk path
         redirectTo: '/login',
         terminal: true,
     },

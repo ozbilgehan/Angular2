@@ -12,10 +12,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var LoginComponent = (function () {
     function LoginComponent() {
+        this.active = true;
+        this.user = {};
     }
+    LoginComponent.prototype.onLogin = function () {
+    };
+    LoginComponent.prototype.resetForm = function () {
+        var _this = this;
+        this.user = {};
+        this.active = false;
+        setTimeout(function () { return _this.active = true; }, 0);
+    };
     LoginComponent = __decorate([
         core_1.Component({
-            template: "login"
+            templateUrl: 'app/common/components/login/login.component.html'
         }), 
         __metadata('design:paramtypes', [])
     ], LoginComponent);

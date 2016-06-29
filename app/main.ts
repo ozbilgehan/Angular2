@@ -11,6 +11,5 @@ bootstrap(AppComponent, [
     LoggingService, //logging service
     APP_ROUTER_PROVIDERS,   //tanımlanmış route'ları register ediyoruz
     disableDeprecatedForms(),   //eski form handler, yeni versiyon geçildiğinde kaldırılabilir
-    provideForms()] //yeni form provider
-    )
-    .catch((err: any) => new LoggingService().error(err));
+    provideForms()  //yeni form provider
+]).catch((err: any) => console.error(err));

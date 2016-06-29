@@ -10,7 +10,6 @@ platform_browser_dynamic_1.bootstrap(app_component_1.AppComponent, [
     logging_service_1.LoggingService,
     app_routes_1.APP_ROUTER_PROVIDERS,
     forms_1.disableDeprecatedForms(),
-    forms_1.provideForms()] //yeni form provider
-)
-    .catch(function (err) { return new logging_service_1.LoggingService().error(err); });
+    forms_1.provideForms() //yeni form provider
+]).catch(function (err) { return console.error(err); });
 //# sourceMappingURL=main.js.map
