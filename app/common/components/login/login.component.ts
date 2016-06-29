@@ -1,6 +1,7 @@
 //external component
 import { Component } from '@angular/core';
-import { NgForm }    from '@angular/common';
+import { NgForm } from '@angular/common';
+import { Logger } from 'angular2-logger/core';
 
 export interface IUser {
     userName: string;
@@ -18,6 +19,7 @@ export class LoginComponent {
     onLogin(): void {
 
     }
+    
     resetForm(): void {
         this.user = <IUser>{};
         this.active = false;
