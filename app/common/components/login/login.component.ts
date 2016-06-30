@@ -2,6 +2,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/common';
 import { Logger } from 'angular2-logger/core';
+import { Router } from '@angular/router';
 
 export interface IUser {
     userName: string;
@@ -16,10 +17,14 @@ export class LoginComponent {
     active: boolean = true;
     user: IUser = <IUser>{};
 
-    onLogin(): void {
+    constructor(private _router: Router) {
 
     }
-    
+
+    onLogin(): void {
+        this._router.navigate(['/product-select']);
+    }
+
     resetForm(): void {
         this.user = <IUser>{};
         this.active = false;
