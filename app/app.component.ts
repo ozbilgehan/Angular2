@@ -1,6 +1,6 @@
 //external modules
-import { Component } from '@angular/core';
-import { ROUTER_DIRECTIVES } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router, ROUTER_DIRECTIVES } from '@angular/router';
 
 @Component({
     selector: 'main-app',
@@ -8,5 +8,12 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
     directives: [ROUTER_DIRECTIVES]
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
+    constructor(private _router: Router) {
+    }
+
+    ngOnInit(): void {
+        //TODO: session kontrolleri
+        this._router.navigate(['/login']);
+    }
 }

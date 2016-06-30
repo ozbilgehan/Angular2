@@ -10,7 +10,7 @@ import { APP_ROUTER_PROVIDERS } from './app.routes';
 bootstrap(AppComponent, [
     Logger, //logging service
     APP_ROUTER_PROVIDERS,   //tanımlanmış route'ları register ediyoruz
-    disableDeprecatedForms(),   //eski form handler, yeni versiyon geçildiğinde kaldırılabilir
+    disableDeprecatedForms(),   //eski form handler, TODO: yeni versiyon geçildiğinde kaldırılabilir
     provideForms()  //yeni form provider
 ])
     .then((msg: any) => console.debug('Application Loaded'))

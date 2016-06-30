@@ -12,15 +12,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(_router) {
+        this._router = _router;
     }
+    AppComponent.prototype.ngOnInit = function () {
+        //TODO: session kontrolleri
+        this._router.navigate(['/login']);
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'main-app',
             template: '<router-outlet></router-outlet>',
             directives: [router_1.ROUTER_DIRECTIVES]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.Router])
     ], AppComponent);
     return AppComponent;
 }());
