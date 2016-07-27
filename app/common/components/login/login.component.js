@@ -8,14 +8,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-//external component
+//external modules
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
 var LoginComponent = (function () {
-    function LoginComponent() {
+    function LoginComponent(_router) {
+        this._router = _router;
         this.active = true;
         this.user = {};
     }
     LoginComponent.prototype.onLogin = function () {
+        this._router.navigate(['/product-select']);
     };
     LoginComponent.prototype.resetForm = function () {
         var _this = this;
@@ -27,7 +30,7 @@ var LoginComponent = (function () {
         core_1.Component({
             templateUrl: 'app/common/components/login/login.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.Router])
     ], LoginComponent);
     return LoginComponent;
 }());
