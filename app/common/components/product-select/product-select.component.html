@@ -1,1 +1,4 @@
-product select
+<div class="container">
+    <div class="well">Product Select</div>
+    <div *ngFor="let module of modules"><a [routerLink]="['/', module.name]">{{module.name}}</a></div>
+</div>

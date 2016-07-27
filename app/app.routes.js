@@ -19,6 +19,10 @@ exports.routes = [
     {
         path: 'product-select',
         component: product_select_component_1.ProductSelectComponent
+    },
+    {
+        path: 'modules',
+        component: product_select_component_1.ProductSelectComponent
     }
 ];
 exports.APP_ROUTER_PROVIDERS = [

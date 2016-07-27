@@ -10,7 +10,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 //external modules
 var core_1 = require('@angular/core');
+var http_1 = require('@angular/http');
 var router_1 = require('@angular/router');
+//internal modules
+var authorization_service_1 = require('./common/services/authorization.service');
 var AppComponent = (function () {
     function AppComponent(_router) {
         this._router = _router;
@@ -23,7 +26,9 @@ var AppComponent = (function () {
         core_1.Component({
             selector: 'main-app',
             template: '<router-outlet></router-outlet>',
-            directives: [router_1.ROUTER_DIRECTIVES]
+            directives: [router_1.ROUTER_DIRECTIVES],
+            providers: [authorization_service_1.AuthorizationService,
+                http_1.HTTP_PROVIDERS]
         }), 
         __metadata('design:paramtypes', [router_1.Router])
     ], AppComponent);

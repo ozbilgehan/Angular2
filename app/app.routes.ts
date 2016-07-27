@@ -19,6 +19,10 @@ export const routes: RouterConfig = [
     {
         path: 'product-select',
         component: ProductSelectComponent
+    },
+    {
+        path: 'modules',
+        component: ProductSelectComponent
     }
 ];
 

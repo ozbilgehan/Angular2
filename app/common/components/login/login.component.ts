@@ -1,4 +1,4 @@
-//external component
+//external modules
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/common';
 import { Logger } from 'angular2-logger/core';
@@ -18,7 +18,6 @@ export class LoginComponent {
     user: IUser = <IUser>{};
 
     constructor(private _router: Router) {
-
     }
 
     onLogin(): void {
